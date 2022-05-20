@@ -3,11 +3,21 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb
     username: sa
-    password: '{cipher}536aafdb5f414b24361809eaa42a7575b187bf63a1371c70ec38acb7858d7f17'
+    password: '{cipher}AQBCirPjTtvbSrBSbItQo2+/cQRRSpMyCd0jhgK2IoA+SEr03wknr83glIhLKW38JBUovZouBkpmXz4DSA9pNF4Z8s61IBZQJxGlXxCSS3Qgg4qCW0ZR/apFUoAMxhaiNG2khw9jgPRe7hzlyNTilWwxTb7XyEzwIdczGbQ/t+3MoKT9Rx2Obwuv9c7cyV4tvLpOiQIWy1ve9bOHaq1TAkvWbVfIe9Q82QF/uVeuAHKibgeOia4wSrwHCmgiw+BFnvVBexbzMo3DOEWNSkR1X/A1xdk1bu4WVKFhmThBtn8pN12IbuXrNUGa+NUAhZlP6Rllsq3ESqUCn63UqZ7p6jlSPlIn1IQ2S7llxyht0J0hlIvYgamEhDrVXlV6PGpJP6o='
 
 token:
-  expiration_time: 86400000
-  secret: '{cipher}2e3e3686f4451170000428011bd2189a6dc802b751ce4b2bc9fcb83187e1d53c'
+  expiration_time: 864000000
+#  secret: user_token_native_user_service
+  secret: '{cipher}AQAxnfPHt/SCwjbvKlOY683StLZhn76Xxc3J2h6Zqo5ewE2y3YEnLh7dHdOmXNoeuew8qiuqAExgeC/8/HrnumuZI7TGcDilX7Sy/Hw1tidiXy9OxOdET/26BJILKbV4WL4/2bXdZ8Q17zyV3+u2TbtvOBLSXP8c/h0qE4BqVcGHshc1uhmAhXa9ag34EqL8ISLKett6q/WI9x0V8OgirJEkR+g9y9k30WMVYS9yWUNj+HqBpoI0H3KMWK0DuHvRXrU5HbxgN7yQMkDmCgUpUm63hPI7vFDjvXWu67lGV6EpCjs8Q3GVjteKz4D/Ugv5DfSxg878nKLFuf0ur6HOA2eYPSXXViU4qRs4T8NeMZnQZCEQ1HOrkmCVirN/6DnHUbzN+Dmm8n4T26nwqva8DtnK'
 
 gateway:
-  ip: 127.0.0.1
+  ip: 172.18.0.5 # 127.0.0.1
+
+order_service:
+# @LoadBalanced 적용 전
+#  url: http://127.0.0.1:8000/order-service/%s/orders
+# @LoadBalanced 적용 후
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    #orders_is_empty: User's orders is empty.
+    orders_is_empty: There is no item.
