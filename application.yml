@@ -1,6 +1,7 @@
 token:
-  expiration_time: 864000000 
-  secret: user_token_native_application_changed_#2
+  expiration_time: 864000000
+#  secret: user_token_native_ecommerce
+  secret: '{cipher}AQBkBbrok0qzgSr5utmJ32heZt5D9nEaEEQSuLTUez2ffCzj9ShzRhkih44rvfP86WRESZLQb44Pznt3gLfDd+Wq7UPW0Ok1qXY7w+m3yhoVOOwBj+uQXdrATqtFNM4NcO7PPNQDcPZ8dYV6HeOx8eArlZgaEUsrZERUz7eY56KDsvSD4z+5nJj0MBdLcBiEwvo6r9UbH6RN9ywItdaYyt5InBunOva1po9D/vujSRE8VaNuKcPeovzS1h6xqGAZZ/9DLYXj4NgX1AzapaKKDUFEN31o0O1U2p+71w77MuOkjQyrROxVAmq2B+tXU5MPW/vibUbu4BW24TnNjJyXloOv7EKOsrGy/eFa/6go8S0jKZ8vnIa1xLJ4VufWSOfjLVyVMJm8gQW5FoZBLQjPwnhc'
 
 gateway:
-  ip: 172.18.0.1
+  ip: 127.0.0.1
